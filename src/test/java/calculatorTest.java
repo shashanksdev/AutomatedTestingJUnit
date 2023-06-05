@@ -18,7 +18,7 @@ public class calculatorTest {
 		
 	}
 
-	@Test
+	@Precondition
 	public void addThreeNumbers() {
 		assertEquals(20, calc.add(5, 5, 10));
 		
