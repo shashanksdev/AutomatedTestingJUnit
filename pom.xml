@@ -1,127 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2023-06-06T15:09:46 UTC" name=" BAS UI  Enhanced flow" finished-at="2023-06-06T15:09:50 UTC" duration-ms="3973">
-    <groups>
-    </groups>
-    <test started-at="2023-06-06T15:09:46 UTC" name="Enhanced Flow test cases for LTL and UPS" finished-at="2023-06-06T15:09:50 UTC" duration-ms="3973">
-      <class name="com.wwex.test.bas.ltl.LTLBookAShipment">
-        <test-method is-config="true" signature="setData()[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:42 UTC" name="setData" finished-at="2023-06-06T15:09:43 UTC" duration-ms="1388" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method is-config="true" signature="setupOverallReport()[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:43 UTC" name="setupOverallReport" finished-at="2023-06-06T15:09:44 UTC" duration-ms="225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupOverallReport -->
-        <test-method is-config="true" signature="secretsManagerTest()[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:44 UTC" name="secretsManagerTest" finished-at="2023-06-06T15:09:46 UTC" depends-on-methods="com.wwex.test.framework.Report.setData, com.wwex.test.framework.Report.setupOverallReport" duration-ms="1876" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- secretsManagerTest -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:46 UTC" name="launchApplication" finished-at="2023-06-06T15:09:49 UTC" duration-ms="3628" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="ltlBookAShipment(java.util.HashMap)[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:49 UTC" name="ltlBookAShipment" data-provider="ltlBookAShipment" finished-at="2023-06-06T15:09:49 UTC" duration-ms="26" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{pieceType=Box, daysFromNow=1, latestHr=12, unitNum=1, destSaveAddress=No, hazmat0=false, type=Box, destCompany=Ltl Smokie One, Name=301-BAS UI - LTL Domestic - Book Shipment- 1HU 1 Commodity, ID=301, orgSaveAddress=No, destContact=Andrew, totWeight=55, fromAddressBook=NA, height=32, nmfcCode=49265, destCity=DALLAS, earliestMin=00, orgCountry=United States, weight=55, destAddress1=6061 Village Bend Dr, latestMin=00, toAddressBook=NA, commodityType=Single Commodity, #OfPieces=5, orgCompany=Kity, latestAMPM=PM, destState=Texas, earliestAMPM=AM, orgState=Illinois, Group=Regression, Description=BAS UI - LTL Domestic - Book Shipment:  1HU, 1 commodity no Hazmat (enter only required fields in HU & commodity), stackable Yes, shipDate as next business day, no accessorials, carrier SAIA, no pickup (self-scheduled), orgContact=Kite, commodityDescription=it's not heavy, orgCity=PROSPECT HEIGHTS, units=1, destZip=75206, #CommoditiesHU1=1, #handlingUnits=1, orgAddress1=1501 S WOLF RD, class=55, orgAddress2=Unit G, stackable=Yes, destPhone=9195945643, length=20, destEmail=julie@wwex.com, orgPhone=7035596345, handlingCharge=true, destCountry=United States, carrier=SAIA, orgEmail=keith@wwex.com, totalWeight=500, width=13, carrierTracker=NA, orgZip=60070, earliestHr=9, username=funregressionadmin1.dcieg2y7@mailosaur.io}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1066)
-at org.testng.Assert.assertEquals(Assert.java:1030)
-at org.testng.Assert.assertEquals(Assert.java:1076)
-at com.wwex.test.bas.ltl.LTLBookAShipment.ltlBookAShipment(LTLBookAShipment.java:61)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:829)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-          <attributes>
-            <attribute name="test">
-              <![CDATA[SQQ-2286]]>
-            </attribute> <!-- test -->
-            <attribute name="labels">
-              <![CDATA[]]>
-            </attribute> <!-- labels -->
-          </attributes>
-        </test-method> <!-- ltlBookAShipment -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:49 UTC" name="tearDown" finished-at="2023-06-06T15:09:50 UTC" duration-ms="179" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ltlBookAShipment status=FAILURE method=LTLBookAShipment.ltlBookAShipment(java.util.HashMap)[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="reportTestResult(org.testng.ITestResult)[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:50 UTC" name="reportTestResult" finished-at="2023-06-06T15:09:50 UTC" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ltlBookAShipment status=FAILURE method=LTLBookAShipment.ltlBookAShipment(java.util.HashMap)[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reportTestResult -->
-        <test-method signature="test()[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:50 UTC" name="test" finished-at="2023-06-06T15:09:50 UTC" depends-on-methods="com.wwex.test.bas.ltl.LTLBookAShipment.ltlBookAShipment" duration-ms="1" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method com.wwex.test.bas.ltl.LTLBookAShipment.test() on instance com.wwex.test.bas.ltl.LTLBookAShipment@65a15628 depends on not successfully finished methods 
-[com.wwex.test.bas.ltl.LTLBookAShipment.ltlBookAShipment() on instance com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method com.wwex.test.bas.ltl.LTLBookAShipment.test() on instance com.wwex.test.bas.ltl.LTLBookAShipment@65a15628 depends on not successfully finished methods 
-[com.wwex.test.bas.ltl.LTLBookAShipment.ltlBookAShipment() on instance com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:829)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="closeOverallReport()[pri:0, instance:com.wwex.test.bas.ltl.LTLBookAShipment@65a15628]" started-at="2023-06-06T15:09:50 UTC" name="closeOverallReport" finished-at="2023-06-06T15:09:50 UTC" duration-ms="274" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeOverallReport -->
-      </class> <!-- com.wwex.test.bas.ltl.LTLBookAShipment -->
-    </test> <!-- Enhanced Flow test cases for LTL and UPS -->
-  </suite> <!--  BAS UI  Enhanced flow -->
-</testng-results>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>automated.testing.maven</groupId>
+	<artifactId>YoutubeAutomatedTesting</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<url>http://www.example.com</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+			<plugins>
+				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+				<!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M5</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+				<!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
