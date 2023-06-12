@@ -13,25 +13,25 @@ public class calculatorTest {
 	}
 	
 	@Test
-	public void addTwoNumbers() {
+	public void add2Numbers() {
 		assertEquals(20, calc.add(10, 10));
 		
 	}
 	
 	@Test
-	public void addThreeNumbers() {
+	public void add3Numbers() {
 		assertEquals(20, calc.add(5, 5, 10));
 		
 	}
 
 	@Test
-	public void subtractTwoNumbers() {
+	public void subtract2Numbers() {
 		assertEquals(0, calc.subtract(10, 10));
 		
 	}
 
 	@Test
-	public void subtractThreeNumbers() {
+	public void subtract3Numbers() {
 		assertEquals(0, calc.subtract(20, 10, 10));
 		
 	}
