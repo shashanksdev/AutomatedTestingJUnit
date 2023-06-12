@@ -17,7 +17,7 @@ public class calculatorTest {
 		assertEquals(20, calc.add(10, 10));
 		
 	}
-
+	
 	@Test
 	public void addThreeNumbers() {
 		assertEquals(20, calc.add(5, 5, 10));
@@ -33,6 +33,18 @@ public class calculatorTest {
 	@Test
 	public void subtractThreeNumbers() {
 		assertEquals(0, calc.subtract(20, 10, 10));
+		
+	}
+	
+	@Test
+	public void aNumbers() {
+		assertEquals(20, calc.add(10, 10));
+		
+	}
+	
+	@Test
+	public void bNumbers() {
+		assertEquals(20, calc.add(10, 10));
 		
 	}
 }
