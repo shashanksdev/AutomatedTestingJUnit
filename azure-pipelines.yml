@@ -1,0 +1,29 @@
+parameters:
+- name: "testplan"
+  type: string
+  default: ""
+ 
+trigger:
+- main
+ 
+resources:
+  webhooks:
+    - webhook: "XrayWebhookTrigger"             ### Webhook alias
+      connection: "XrayWebhookConnection"       ### Incoming webhook service connection
+ 
+pool:
+  vmImage: ubuntu-latest
+ 
+steps:
+ 
+- script: dotnet restore
+  displayName: 'install build dependencies'
+ 
+- script: |
+    dotnet test -s nunit.runsettings
+  displayName: 'Run tests'
+- bash: |
+    set -x
+    export token=$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SECRET\" }" "$(xray_endpoint)/api/v2/authenticate"| tr -d '"') 
+    curl -o - -H "Content-Type: text/xml" -H "Authorization: Bearer $token" --data @./bin/Debug/net5.0/TestResults/nunit_webdriver_tests.xml  "$(xray_endpoint)/api/v2/import/execution/nunit?projectKey=CALC&testPlanKey=${TESTPLAN}"
+  displayName: 'Import results to Xray cloud'
