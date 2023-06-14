@@ -25,5 +25,5 @@ steps:
 - bash: |
     set -x
     export token=$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SECRET\" }" "$(xray_endpoint)/api/v2/authenticate"| tr -d '"') 
-    curl -o - -H "Content-Type: text/xml" -H "Authorization: Bearer $token" --data @./bin/Debug/net5.0/TestResults/nunit_webdriver_tests.xml  "$(xray_endpoint)/api/v2/import/execution/nunit?projectKey=CALC&testPlanKey=${TESTPLAN}"
+    curl -o - -H "Content-Type: text/xml" -H "Authorization: Bearer $token" --data @./bin/Debug/net5.0/TestResults/nunit_webdriver_tests.xml  "$(xray_endpoint)/api/v2/import/execution/nunit?projectKey=TSTNGWTHSH&testPlanKey=${TESTPLAN}"
   displayName: 'Import results to Xray cloud'
