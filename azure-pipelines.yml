@@ -24,7 +24,7 @@ steps:
   
 - task: Maven@3
   inputs:
-    mavenPomFile: 'java-junit-calc/pom.xml'
+    mavenPomFile: '/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '17.0.7'
