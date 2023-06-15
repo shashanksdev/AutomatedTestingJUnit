@@ -22,7 +22,6 @@ steps:
     dotnet test -s nunit.runsettings
   displayName: 'Run tests'
   
-steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'java-junit-calc/pom.xml'
